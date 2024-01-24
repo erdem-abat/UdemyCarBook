@@ -32,6 +32,7 @@ namespace UdemyCarBook.WebUI.Controllers
         {
             ViewBag.v1 = "Blogs";
             ViewBag.v2 = "Blog Details";
+            ViewBag.blogId = id;
             return View();
         }
     }

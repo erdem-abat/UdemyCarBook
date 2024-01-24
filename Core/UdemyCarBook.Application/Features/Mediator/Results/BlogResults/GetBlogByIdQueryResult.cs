@@ -12,6 +12,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Results.BlogResults
         public string Title { get; set; }
         public int AuthorID { get; set; }
         public string CoverImageUrl { get; set; }
+        public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public int CategoryId { get; set; }
     }

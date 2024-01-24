@@ -19,6 +19,12 @@ namespace UdemyCarBook.Persistence.Repositories.BlogRepositories
             _carBookContext = carBookContext;
         }
 
+        public List<Blog> GetAllBlogsWithAuthors()
+        {
+            var values = _carBookContext.Blogs.Include(b => b.Author).Include(x=>x.Category).ToList();
+            return values;
+        }
+
         public List<Blog> GetLast3BlogsWithAuthors()
         {
             var values = _carBookContext.Blogs.Include(b => b.Author).OrderByDescending(x => x.BlogID).Take(3).ToList();

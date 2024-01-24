@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UdemyCarBook.Domain.Entities;
 
-namespace UdemyCarBook.Application.Features.Mediator.Results.BlogResults
+namespace UdemyCarBook.Dto.BlogDtos
 {
-    public class GetAllBlogsWithAuthorQueryResult
+    public class ResultAllBlogsWithAuthorDto
     {
         public int BlogID { get; set; }
         public string Title { get; set; }

@@ -13,6 +13,7 @@ namespace UdemyCarBook.Domain.Entities
         public int AuthorID { get; set; }
         public Author Author { get; set; }
         public string CoverImageUrl { get; set; }
+        public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }

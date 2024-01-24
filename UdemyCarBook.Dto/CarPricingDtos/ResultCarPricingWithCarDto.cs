@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Dto.CarPricingDtos
 {
-    public class ResultCarPricingWithCarDto
+    public class ResultAllBlogAuthorDto
     {
         public int CarPricingID { get; set; }
         public string BrandName { get; set; }

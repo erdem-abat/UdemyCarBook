@@ -23,7 +23,7 @@ namespace UdemyCarBook.WebUI.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultCarPricingWithCarDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultAllBlogAuthorDto>>(jsonData);
                 return View(values);
             }
             return View();

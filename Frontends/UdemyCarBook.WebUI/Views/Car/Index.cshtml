@@ -1,4 +1,4 @@
-﻿@model List<ResultCarPricingWithCarDto>
+﻿@model List<ResultAllBlogAuthorDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/UILayout/Index.cshtml";
@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             @foreach (var item in Model)
-            {w
+            {
                 <div class="col-md-4">
                     <div class="car-wrap rounded ftco-animate">
                         <div class="img rounded d-flex align-items-end" style="background-image: url(/carbook-master/images/@item.CoverImageUrl);">

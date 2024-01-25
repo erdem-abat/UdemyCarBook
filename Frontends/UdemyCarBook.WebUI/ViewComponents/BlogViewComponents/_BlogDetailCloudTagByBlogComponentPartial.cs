@@ -17,7 +17,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7091/api/TagClouds/" + id);
+            var responseMessage = await client.GetAsync($"https://localhost:7091/api/TagClouds/GetTagCloudByBlogId?id=" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

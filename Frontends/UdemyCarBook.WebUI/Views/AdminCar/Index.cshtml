@@ -1,7 +1,57 @@
-﻿
+﻿@model List<ResultCarWithBrandsDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
 }
 
-<h1>Index</h1>
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Cars</h4>
+                        <p class="card-subtitle mb-4">
+                            Car Edit Page
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Brand</th>
+                                        <th>Model</th>
+                                        <th>Transmission</th>
+                                        <th>Km</th>
+                                        <th>Delete</th>
+                                        <th>Update</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.BrandName</td>
+                                            <td>@item.Model</td>
+                                            <td>@item.Transmission</td>
+                                            <td>@item.Km</td>
+                                            <td><a href="/AdminCar/RemoveCar/@item.CarId" class="btn btn-outline-danger">Delete</a></td>
+                                            <td><a href="/AdminCar/UpdateCar/@item.CarId" class="btn btn-outline-success">Update</a></td>
+                                            <td><a href="/CarList/CarDetail/@item.CarId" class="btn btn-outline-dark">Detail</a></td>
+                                            <td><a href="/CarList/CarDetail/@item.CarId" class="btn btn-outline-warning">Show On Site</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/AdminCar/CreateCar/" class="btn btn-outline-primary">New Car</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

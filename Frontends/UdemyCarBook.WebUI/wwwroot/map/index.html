@@ -1,16 +1,55 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Location</title>
     <link rel="stylesheet" href="src/leaflet.css" />
-    <script src="src/leaflet.js"></script>
+    <style>
+        #map{
+            height:100vh;
+            width:100%;
+        }
+    </style>
 </head>
 <body>
    
     <div id="map">
-        <script src="src/index.js"></script>
+        
     </div>
 
 </body>
 </html>
+<script src="src/leaflet.js"></script>
+<script>var map = L.map('map').setView([40.86354, 29.29059], 13);
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
+
+
+    // marker
+
+
+    var singleMarker = L.marker([40.86354, 29.29059])
+    //singleMarker.addTo(map);
+    var popup = singleMarker.bindPopup('this is a popup')
+    popup.addTo(map);
+
+    var myIcon = L.icon({
+        iconUrl: 'marker.jpg',
+        iconSize: [95, 95],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: 'my-icon-shadow.png',
+        shadowSize: [68, 95],
+        shadowAnchor: [22, 94]
+    });
+   
+    var singlemarker = L.marker([40.86354, 29.29059], { icon: myIcon })
+    singlemarker.addTo(map);
+    var popup = singleMarker.bindPopup('Erdem Abat Esenyalı Valisi')
+    popup.addTo(map);
+    </script>
+
+

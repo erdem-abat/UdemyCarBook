@@ -1,0 +1,36 @@
+﻿@model CreateAuthorDto
+
+@{
+    ViewData["Title"] = "CreateAuthor";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Create a New Author</h4>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Your Name" asp-for="Name">
+                                <label for="exampleInputDescription">Description</label>
+                                <textarea rows="5" placeholder="Enter Your Description" asp-for="Description"></textarea>
+                                <label for="exampleInputImageUrl">imageUrl</label>
+                                <input type="text" class="form-control" id="exampleInputImageUrl" placeholder="Enter Your imageUrl" asp-for="ImageUrl">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

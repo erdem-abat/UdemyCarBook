@@ -1,0 +1,33 @@
+﻿@model CreateAboutDto
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Create a New About</h4>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">title</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" placeholder="Enter Your title" asp-for="title">
+                                <label for="exampleInputName">description</label>
+                                <textarea rows="5" placeholder="Enter Your Description" asp-for="description"></textarea>
+                                <label for="exampleInputName">imageUrl</label>
+                                <input type="text" class="form-control" id="exampleInputImageUrl" placeholder="Enter Your imageUrl" asp-for="imageUrl">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

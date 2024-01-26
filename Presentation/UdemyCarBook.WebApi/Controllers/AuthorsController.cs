@@ -46,7 +46,7 @@ namespace UdemyCarBook.WebApi.Controllers
             return Ok("Author Succesfully Updated");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveAuthor(int id)
         {
             await _mediator.Send(new RemoveAuthorCommand(id));

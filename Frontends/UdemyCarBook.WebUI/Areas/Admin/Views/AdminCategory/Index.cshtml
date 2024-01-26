@@ -1,0 +1,53 @@
+﻿@model List<ResultCategoryDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Category</h4>
+                        <p class="card-subtitle mb-4">
+                            Main Page Category Edit Page
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Delete</th>
+                                        <th>Update</th>
+                                        <th>Category's Blogs</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>@item.Name</td>
+                                            <td><a href="/Admin/AdminCategory/RemoveCategory/@item.CategoryID" class="btn btn-outline-danger">Delete</a></td>
+                                            <td><a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Update</a></td>
+                                            <td><a href="/Admin/AdminCategory/#/@item.CategoryID" class="btn btn-outline-success">Category's Blogs</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Admin/AdminCategory/CreateCategory/" class="btn btn-outline-primary">New Category</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

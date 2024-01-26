@@ -1,4 +1,4 @@
-﻿@model List<ResultCarWithBrandsDto>
+﻿@model List<ResultFeatureDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -13,20 +13,16 @@
                     <div class="card-body">
                         <h4 class="card-title">Cars</h4>
                         <p class="card-subtitle mb-4">
-                            Car Edit Page
+                            Car Feature Edit Page
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Brand</th>
-                                        <th>Model</th>
-                                        <th>Transmission</th>
-                                        <th>Km</th>
+                                        <th>Feature</th>
                                         <th>Delete</th>
                                         <th>Update</th>
-                                        <th>Details</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -35,19 +31,14 @@
                                         count++;
                                         <tr>
                                             <th scope="row">@count</th>
-                                            <td>@item.BrandName</td>
-                                            <td>@item.Model</td>
-                                            <td>@item.Transmission</td>
-                                            <td>@item.Km</td>
-                                            <td><a href="/AdminCar/RemoveCar/@item.CarId" class="btn btn-outline-danger">Delete</a></td>
-                                            <td><a href="/AdminCar/UpdateCar/@item.CarId" class="btn btn-outline-success">Update</a></td>
-                                            <td><a href="/AdminCar/CarList/CarDetail/@item.CarId" class="btn btn-outline-dark">Detail</a></td>
-                                            <td><a href="/AdminCar/CarList/CarDetail/@item.CarId" class="btn btn-outline-warning">Show On Site</a></td>
+                                            <td>@item.Name</td>
+                                            <td><a href="/AdminFeature/RemoveFeature/@item.FeatureID" class="btn btn-outline-danger">Delete</a></td>
+                                            <td><a href="/AdminFeature/UpdateFeature/@item.FeatureID" class="btn btn-outline-success">Update</a></td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <a href="/AdminCar/CreateCar/" class="btn btn-outline-primary">New Car</a>
+                            <a href="/AdminFeature/CreateFeature/" class="btn btn-outline-primary">New Feature</a>
                         </div>
                     </div>
                 </div>

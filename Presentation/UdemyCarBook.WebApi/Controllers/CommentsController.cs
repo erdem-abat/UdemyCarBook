@@ -21,6 +21,12 @@ namespace UdemyCarBook.WebApi.Controllers
             var values = _commentRepository.GetAll();
             return Ok(values);
         }
+        [HttpGet("CommentListByBlog")]
+        public IActionResult CommentListByBlog(int id)
+        {
+            var values = _commentRepository.GetCommentsByBlogId(id);
+            return Ok(values);
+        }
         [HttpPost]
         public IActionResult CreateComment(Comment comment) {
             _commentRepository.Create(comment);

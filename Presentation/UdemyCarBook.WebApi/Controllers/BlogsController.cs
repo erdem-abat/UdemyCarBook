@@ -45,7 +45,7 @@ namespace UdemyCarBook.WebApi.Controllers
             return Ok("Blog Succesfully Updated");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveBlog(int id)
         {
             await _mediator.Send(new RemoveBlogCommand(id));

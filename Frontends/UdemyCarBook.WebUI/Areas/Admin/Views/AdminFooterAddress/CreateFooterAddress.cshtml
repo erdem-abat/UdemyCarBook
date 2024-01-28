@@ -1,0 +1,33 @@
+﻿@model CreateFooterAddressDto
+@{
+    ViewData["Title"] = "CreateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Create a New FooterAddress</h4>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputAddress">Address</label>
+                                <input type="text" class="form-control" id="exampleInputAddress" placeholder="Enter Your Address" asp-for="Address">
+                                <label for="exampleInputEmail">Email</label>
+                                <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter Your Email" asp-for="Email">
+                                <label for="exampleInputPhone">Phone</label>
+                                <input type="text" class="form-control" id="exampleInputPhone" placeholder="Enter Your Phone" asp-for="Phone">
+                                <label for="exampleInputDescription">Description</label>
+                                <input type="text" class="form-control" id="exampleInputDescription" placeholder="Enter Your Description" asp-for="Description">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

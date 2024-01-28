@@ -21,7 +21,7 @@ namespace UdemyCarBook.Persistence.Repositories.PricingRepositories
 
         public List<CarPricing> GetCarPricingWithCars()
         {
-            var values = _context.CarPricings.Include(x => x.Car).ThenInclude(x => x.Brand).Include(x => x.Pricing).Where(x=>x.PricingID == 1).ToList();
+            var values = _context.CarPricings.Include(x => x.Car).ThenInclude(x => x.Brand).Include(x => x.Pricing).ToList();
             return values;
         }
     }

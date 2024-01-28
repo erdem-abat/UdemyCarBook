@@ -36,7 +36,7 @@ namespace UdemyCarBook.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("Creation Succeed");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveSocialMedia(int id)
         {
             await _mediator.Send(new RemoveSocialMediaCommand(id));

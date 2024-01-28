@@ -1,0 +1,46 @@
+﻿@model List<ResultContactDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Contact Messages</h4>
+                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Sender</th>
+                                    <th>Subject</th>
+                                    <th>Email</th>
+                                    <th>Date</th>
+                                    <th>Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Subject</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.SendDate.ToShortDateString()</td>
+                                        <td>@item.Message</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

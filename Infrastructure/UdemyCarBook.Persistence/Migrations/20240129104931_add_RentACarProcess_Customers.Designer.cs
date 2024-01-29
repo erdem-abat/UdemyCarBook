@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UdemyCarBook.Persistence.Context;
 
@@ -11,9 +12,11 @@ using UdemyCarBook.Persistence.Context;
 namespace UdemyCarBook.Persistence.Migrations
 {
     [DbContext(typeof(CarBookContext))]
-    partial class CarBookContextModelSnapshot : ModelSnapshot
+    [Migration("20240129104931_add_RentACarProcess_Customers")]
+    partial class add_RentACarProcess_Customers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -501,7 +504,7 @@ namespace UdemyCarBook.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateOnly>("DropOffDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("date");
 
                     b.Property<string>("DropOffDescription")
                         .IsRequired()
@@ -514,7 +517,7 @@ namespace UdemyCarBook.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateOnly>("PickUpDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("date");
 
                     b.Property<string>("PickUpDescription")
                         .IsRequired()

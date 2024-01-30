@@ -11,6 +11,13 @@ namespace UdemyCarBook.Application.Features.Mediator.Queries.RentACarQueries
     public class GetRentACarQuery : IRequest<List<GetRentACarQueryResult>>
     {
         public int LocationID { get; set; }
+
+        public GetRentACarQuery(int locationID, bool available)
+        {
+            LocationID = locationID;
+            Available = available;
+        }
+
         public bool Available { get; set; }
 
     }

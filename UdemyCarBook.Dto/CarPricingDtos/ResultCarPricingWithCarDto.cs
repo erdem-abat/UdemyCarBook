@@ -8,6 +8,7 @@ namespace UdemyCarBook.Dto.CarPricingDtos
 {
     public class ResultAllBlogAuthorDto
     {
+        public int CarId { get; set; }
         public int CarPricingID { get; set; }
         public string BrandName { get; set; }
         public decimal Amount { get; set; }

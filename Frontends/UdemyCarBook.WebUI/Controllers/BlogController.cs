@@ -35,5 +35,14 @@ namespace UdemyCarBook.WebUI.Controllers
             ViewBag.blogId = id;
             return View();
         }
+        [HttpGet]
+        public PartialViewResult AddComment(string p) { return PartialView(p); }
+
+        [HttpPost]
+        public IActionResult AddComment()
+        {
+            return View();
+        }
+
     }
 }

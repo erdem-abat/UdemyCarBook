@@ -135,7 +135,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
 
             #region GetCarCountByKmLowerThen1000
             var GetCarCountByKmLowerThen1000 = await client.GetAsync("https://localhost:7091/api/Statistics/GetCarCountByKmLowerThen1000");
-            if (GetBlogTitleByMaxBlogComment.IsSuccessStatusCode)
+            if (GetCarCountByKmLowerThen1000.IsSuccessStatusCode)
             {
                 var jsonData = await GetCarCountByKmLowerThen1000.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<ResultStatisticsDto>(jsonData);
@@ -145,7 +145,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
 
             #region GetCarCountByFuelPetrolOrDiesel
             var GetCarCountByFuelPetrolOrDiesel = await client.GetAsync("https://localhost:7091/api/Statistics/GetCarCountByFuelPetrolOrDiesel");
-            if (GetBlogTitleByMaxBlogComment.IsSuccessStatusCode)
+            if (GetCarCountByFuelPetrolOrDiesel.IsSuccessStatusCode)
             {
                 var jsonData = await GetCarCountByFuelPetrolOrDiesel.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<ResultStatisticsDto>(jsonData);
@@ -155,7 +155,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
 
             #region GetCarCountByFuelElectric
             var GetCarCountByFuelElectric = await client.GetAsync("https://localhost:7091/api/Statistics/GetCarCountByFuelElectric");
-            if (GetBlogTitleByMaxBlogComment.IsSuccessStatusCode)
+            if (GetCarCountByFuelElectric.IsSuccessStatusCode)
             {
                 var jsonData = await GetCarCountByFuelElectric.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<ResultStatisticsDto>(jsonData);
@@ -165,7 +165,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
 
             #region GetCarBrandAndModelByRentPriceDailyMax
             var GetCarBrandAndModelByRentPriceDailyMax = await client.GetAsync("https://localhost:7091/api/Statistics/GetCarBrandAndModelByRentPriceDailyMax");
-            if (GetBlogTitleByMaxBlogComment.IsSuccessStatusCode)
+            if (GetCarBrandAndModelByRentPriceDailyMax.IsSuccessStatusCode)
             {
                 var jsonData = await GetCarBrandAndModelByRentPriceDailyMax.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<ResultStatisticsDto>(jsonData);
@@ -175,7 +175,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
 
             #region GetCarBrandAndModelByRentPriceDailyMin
             var GetCarBrandAndModelByRentPriceDailyMin = await client.GetAsync("https://localhost:7091/api/Statistics/GetCarBrandAndModelByRentPriceDailyMin");
-            if (GetBlogTitleByMaxBlogComment.IsSuccessStatusCode)
+            if (GetCarBrandAndModelByRentPriceDailyMin.IsSuccessStatusCode)
             {
                 var jsonData = await GetCarBrandAndModelByRentPriceDailyMin.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<ResultStatisticsDto>(jsonData);

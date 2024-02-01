@@ -13,6 +13,7 @@ namespace UdemyCarBook.Application.Features.RepositoryPattern
         void Update(T entity);
         void Remove(int id);
         T GetById(int id);
-        List<T> GetCommentsByBlogId(int id);
+        List<T> GetCommentsByBlogId(int id); //ek interface eklemeden bu işlem sağlandı normalde burada olmamalı!
+        int GetCountCommentByBlog(int id); //ek interface eklemeden bu işlem sağlandı normalde burada olmamalı!
     }
 }

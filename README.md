@@ -6,29 +6,48 @@
 ![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/96d025c3-3a27-4c2d-9ffb-3abaaddd8517)
 
 
-Kullanılan Teknolojiler
-Backend
+<b>Kullanılan Teknolojiler</b>
+
+<b>Backend</b>
+
 C#: Backend tarafında C# dili kullanılmıştır.
+
 MSSQL: Veritabanı olarak Microsoft SQL Server kullanılmıştır.
+
 Swagger: API dokümantasyonu için Swagger kullanılmıştır.
-Code First Yaklaşımı
-Frontend
+
+* Code First Yaklaşımı
+
+<b>Frontend</b>
+
 HTML: Sayfaların yapılandırılması için HTML kullanılmıştır.
+
 CSS: Stillerin belirlenmesi için CSS kullanılmıştır.
+
 JavaScript: Sayfa etkileşimleri için JavaScript kullanılmıştır.
-Proje Yapısı ve Katmanlı Mimarisi
+
+<b>Proje Yapısı ve Katmanlı Mimarisi</b>
 
 Controllers: API isteklerini karşılayan Controller sınıfları bulunur.
+
 CQRS: Veritabanı işlemlerinin yapıldığı CQRS sınıfları bulunur.
+
 Mediator: Veritabanı işlemlerinin yapıldığı Mediator sınıfları bulunur.
+
 Repositories: Veritabanı işlemlerinin yapıldığı Repository sınıfları bulunur.
+
 DTOs: Gerekli olan verilerin sadece belirli bileşenlerle paylaşıldığı DTO sınıfları bulunur.
 
-API Endpoints
+<b>API Endpoints</b>
+
 Aşağıda projenin API endpoint'leri bulunmaktadır:(Diğer Tüm Tablolar için Aynı İşlemler Yapıldı)
 
 GET /api/cars: Tüm arabaları getirir.
+
 GET /api/locations/id: Belirli bir lokasyonu ID'ye göre getirir.
+
 POST /api/banners: Yeni bir banner ekler.
+
 PUT /api/abouts/id: Belirli bir hakkımda detayını günceller.
+
 DELETE /api/comments/id: Belirli bir yorumu siler.

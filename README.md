@@ -2,7 +2,6 @@
 ![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/72177712-ca84-4e7f-8e29-dda1e7425820)
 ![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/d2a802f8-632a-4105-a1b4-a7cc360a53d3)
 ![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/e01e3d23-7c91-4872-b979-2960d8a434e5)
-![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/e5809ed2-aeb3-4e42-aa56-c7a0e4072136)
 ![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/3f52854f-59b3-44fc-ac17-4961620c863b)
 ![image](https://github.com/erdem-abat/UdemyCarBook/assets/28300161/96d025c3-3a27-4c2d-9ffb-3abaaddd8517)
 

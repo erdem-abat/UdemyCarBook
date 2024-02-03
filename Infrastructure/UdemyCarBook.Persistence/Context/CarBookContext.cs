@@ -12,7 +12,7 @@ namespace UdemyCarBook.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=netcore8api.cjgui42kcasz.eu-north-1.rds.amazonaws.com;Initial Catalog=UdemyCarBookDb;Persist Security Info=True;User ID=labfaresi;Password=netcore8;Pooling=False;Multiple Active Result Sets=False;Encrypt=True;Trust Server Certificate=True;");
+            optionsBuilder.UseSqlServer("Server=ERDEM;Database=CarBook;Trusted_Connection=True;TrustServerCertificate=True;");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }

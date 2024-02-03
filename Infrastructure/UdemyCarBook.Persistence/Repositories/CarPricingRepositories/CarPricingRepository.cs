@@ -57,9 +57,9 @@ namespace UdemyCarBook.Persistence.Repositories.PricingRepositories
 							  CoverImageUrl = grouped.Key.CoverImageUrl,
 							  Amounts = new List<decimal>
 						{
-							grouped.Sum(x => x.carPricing.PricingID == 4 ? x.carPricing.Amount : 0),
-							grouped.Sum(x => x.carPricing.PricingID == 3 ? x.carPricing.Amount : 0),
-							grouped.Sum(x => x.carPricing.PricingID == 5 ? x.carPricing.Amount : 0)
+							grouped.Sum(x => x.carPricing.PricingID == 1 ? x.carPricing.Amount : 0),
+							grouped.Sum(x => x.carPricing.PricingID == 2 ? x.carPricing.Amount : 0),
+							grouped.Sum(x => x.carPricing.PricingID == 3 ? x.carPricing.Amount : 0)
 						}
 						  }).ToList();
 			

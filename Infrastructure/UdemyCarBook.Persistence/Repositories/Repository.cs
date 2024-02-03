@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using UdemyCarBook.Application.Interfaces;
@@ -43,6 +44,11 @@ namespace UdemyCarBook.Persistence.Repositories
         {
             _context.Set<T>().Update(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
+        {
+            return await _context.Set<T>().SingleOrDefaultAsync(filter);
         }
     }
 }

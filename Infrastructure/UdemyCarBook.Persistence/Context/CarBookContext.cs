@@ -15,6 +15,8 @@ namespace UdemyCarBook.Persistence.Context
             optionsBuilder.UseSqlServer("Server=netcore8api.cjgui42kcasz.eu-north-1.rds.amazonaws.com;Initial Catalog=UdemyCarBookDb;Persist Security Info=True;User ID=labfaresi;Password=netcore8;Pooling=False;Multiple Active Result Sets=False;Encrypt=True;Trust Server Certificate=True;");
         }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Car> Cars { get; set; }
